@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Marqdouj.DotNet.Web.Components.Tests/Marqdouj.DotNet.Web.Components.Tests.csproj" />
+  <Project Path="Marqdouj.DotNet.Web.Components/Marqdouj.DotNet.Web.Components.csproj" />
+</Solution>

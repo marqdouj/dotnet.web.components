@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <PackageIcon>DMNuGet.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Version>10.0.0-Preview</Version>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>C# Components, classes, and Extensions for web-based projects</Title>
+    <PackageProjectUrl>https://github.com/Marqdouj/DotNet.Web.Components</PackageProjectUrl>
+    <PackageTags>C# Web Html</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <Authors>Douglas Marquardt</Authors>
+    <Copyright>© Douglas Marquardt. All rights reserved.</Copyright>
+    <Description>C# components, classes, and extensions I find useful in my .NET web-based projects</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\DMNuGet.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="10.0.0-rc.1.25451.107" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+</Project>
