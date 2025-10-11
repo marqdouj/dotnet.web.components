@@ -28,6 +28,10 @@ A demo of all my `DotNet` packages can be found [here](https://github.com/marqdo
    - `ResizeObserverService`. 
      - Scoped service to monitor html element resizing.
      - JSInterop wrapper to the Html [ResizeObserver](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver).
+     - Configuration: 
+       - `builder.Services.AddScoped<IResizeObserverService, ResizeObserverService>();`
+     - Use:
+       - `@inject IResizeObserverService ResizeObserver`
 
 **Classes**
   - **UI Model**
