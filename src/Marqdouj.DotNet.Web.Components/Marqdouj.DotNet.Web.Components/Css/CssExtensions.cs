@@ -12,8 +12,8 @@ namespace Marqdouj.DotNet.Web.Components.Css
         /// A guid might start with a number, so prefix it with a valid css prefix. Validated using 
         /// the pattern ^[A-Za-z_]+$
         /// Default is "g_".
-        /// <see cref="https://developer.mozilla.org/en-US/docs/Web/CSS/ident"/>
-        /// <see cref="https://www.w3.org/TR/CSS21/syndata.html#value-def-identifier"/>"/>
+        /// <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/ident"/>
+        /// <see href="https://www.w3.org/TR/CSS21/syndata.html#value-def-identifier"/>"/>
         /// </param>  
         /// <param name="format"><see cref="Guid.ToString()"/></param>
         /// <returns>

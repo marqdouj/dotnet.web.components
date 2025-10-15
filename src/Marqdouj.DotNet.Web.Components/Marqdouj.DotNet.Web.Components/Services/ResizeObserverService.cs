@@ -33,10 +33,9 @@ namespace Marqdouj.DotNet.Web.Components.Services
         }
 
         /// <summary>
-        /// <see cref="Observe(List{string}, bool)"/>
+        /// <see cref="Observe(List{string})"/>
         /// </summary>
         /// <param name="id"></param>
-        /// <param name="debug"></param>
         /// <returns></returns>
         public async ValueTask Observe(string id)
         {
@@ -47,7 +46,6 @@ namespace Marqdouj.DotNet.Web.Components.Services
         /// Add elements to ResizeObserver <see href="https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver"/>
         /// </summary>
         /// <param name="ids">List of element IDs</param>
-        /// <param name="debug">flag to write action to browser console; default = false</param>
         /// <returns></returns>
         public async ValueTask Observe(List<string> ids)
         {
@@ -56,10 +54,9 @@ namespace Marqdouj.DotNet.Web.Components.Services
         }
 
         /// <summary>
-        /// <see cref="UnObserve(List{string}, bool)"/>
+        /// <see cref="UnObserve(List{string})"/>
         /// </summary>
         /// <param name="id"></param>
-        /// <param name="debug"></param>
         /// <returns></returns>
         public async ValueTask UnObserve(string id)
         {
@@ -70,7 +67,6 @@ namespace Marqdouj.DotNet.Web.Components.Services
         /// Remove elements from ResizeObserver <see href="https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver"/>
         /// </summary>
         /// <param name="ids">List of element IDs</param>
-        /// <param name="debug">flag to write action to browser console; default = false</param>
         /// <returns></returns>
         public async ValueTask UnObserve(List<string> ids)
         {

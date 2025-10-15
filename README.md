@@ -55,6 +55,9 @@ A demo of all my `DotNet` packages can be found [here](https://github.com/marqdo
        where binding requires a string. Designed for use with Blazor @bind-Value.
 
 ## Release Notes
+- `10.0.0-Preview-3.0`
+  - `XMLComments`. Comments are now distributed with the package.
+
 - `10.0.0-Preview-2`
   - `GeolocationService`. Added service.
   - `JSLoggerService`.  Added service
