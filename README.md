@@ -25,6 +25,21 @@ A demo of all my `DotNet` packages can be found [here](https://github.com/marqdo
       - `HtmlColorName.ToHex()`. Returns the Hex string for the HtmlColorName.
 
  **Services**
+   - `GeolocationService`. 
+     - Uses the Geolocation API services to get the current position.
+     - Configuration:
+       - `builder.Services.AddScoped<IGeolocationService, GeolocationService>();`
+     - Use:
+       - `@inject IGeolocationService GeolocationService`
+  
+   - `JSLoggerService`. 
+     - Logs messages to the browser Console.
+     - It is not an implementation of ILogger, but rather mimics most methods of ILogger as async ValueTask.
+     - Configuration:
+       - `builder.Services.AddJSLoggerService();`
+     - Use:
+       - `@inject IJSLoggerService LoggerService`
+
    - `ResizeObserverService`. 
      - Scoped service to monitor html element resizing.
      - JSInterop wrapper to the Html [ResizeObserver](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver).
@@ -40,5 +55,9 @@ A demo of all my `DotNet` packages can be found [here](https://github.com/marqdo
        where binding requires a string. Designed for use with Blazor @bind-Value.
 
 ## Release Notes
+- `10.0.0-Preview-2`
+  - `GeolocationService`. Added service.
+  - `JSLoggerService`.  Added service
+
 - `10.0.0-Preview`
   - Initial release.

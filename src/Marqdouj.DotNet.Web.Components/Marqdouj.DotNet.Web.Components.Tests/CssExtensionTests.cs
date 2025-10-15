@@ -38,7 +38,9 @@ namespace Marqdouj.DotNet.Web.Components.Tests
 
         private static void ValidatePrefix(Guid guid)
         {
+#pragma warning disable CS8625 // Cannot convert null literal to non-nullable reference type.
             Assert.Throws<ArgumentException>(() => guid.ToCssId(null));
+#pragma warning restore CS8625 // Cannot convert null literal to non-nullable reference type.
             Assert.Throws<ArgumentException>(() => guid.ToCssId(""));
             Assert.Throws<ArgumentException>(() => guid.ToCssId(" "));
             Assert.Throws<ArgumentException>(() => guid.ToCssId("1_"));
