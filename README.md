@@ -53,8 +53,14 @@ A demo of all my `DotNet` packages can be found [here](https://github.com/marqdo
     -  Classes for UI presentation and element binding.
        Implements a `BindValue` string property for non-string values
        where binding requires a string. Designed for use with Blazor @bind-Value.
+  - `XmlDocReader`. Provides functionality to read and extract XML documentation comments from an assembly's XML documentation file.
+  - `XmlUIModel`. Wrapper to UIModel that works with the `XmlDocReader` to update comments.
 
 ## Release Notes
+- `10.0.0-rc-1.0`
+  - `XmlDocReader`. New class.
+  - `XmlUIModel`. New class.
+
 - `10.0.0-Preview-3.0`
   - `XMLComments`. Comments are now distributed with the package.
 
