@@ -26,16 +26,10 @@ namespace Marqdouj.DotNet.Web.Components.UI
         private readonly Type pType;
         private readonly Type? pTypeN;
 
-        public UIModelValue(string propertyName) : base(propertyName)
+        public UIModelValue(string propertyName) 
+            : this(typeof(TSource).GetProperty(propertyName) 
+                  ?? throw new ArgumentException($"PropertyInfo not found for '{typeof(TSource).Name}.{propertyName}'", nameof(propertyName)))
         {
-            var type = typeof(TSource);
-            Property = type.GetProperty(propertyName)
-                ?? throw new ArgumentException($"PropertyInfo not found for '{type.Name}.{propertyName}'", nameof(propertyName));
-            IsNumerical = Property.PropertyType.IsNumerical();
-
-            pType = Property.PropertyType;
-            pTypeN = Nullable.GetUnderlyingType(pType);
-            IsNullableValueType = pTypeN != null;
         }
 
         public UIModelValue(PropertyInfo property) : base(property.Name)
@@ -45,12 +39,21 @@ namespace Marqdouj.DotNet.Web.Components.UI
                 throw new ArgumentException($"PropertyInfo ReflectedType [{property.Name}] does not match source type [{type.Name}].", nameof(property));
 
             Property = property;
-            IsNumerical = Property.PropertyType.IsNumerical();
-
             pType = Property.PropertyType;
             pTypeN = Nullable.GetUnderlyingType(pType);
+
+            IsNumerical = Property.PropertyType.IsNumerical();
             IsNullableValueType = pTypeN != null;
+
+            var nullableContext = new NullabilityInfoContext();
+            var nullabilityInfo = nullableContext.Create(Property);
+            IsNullable = nullabilityInfo.WriteState == NullabilityState.Nullable;
         }
+
+        /// <summary>
+        /// Gets a value indicating whether the current type allows null values, based on <see cref="NullabilityInfo"/>
+        /// </summary>
+        public bool IsNullable { get; }
 
         /// <summary>
         /// Indicates if the underlying Property Type is a nullable value type.

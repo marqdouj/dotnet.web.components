@@ -57,6 +57,11 @@ A demo of all my `DotNet` packages can be found [here](https://github.com/marqdo
   - `XmlUIModel`. Wrapper to UIModel that works with the `XmlDocReader` to update comments.
 
 ## Release Notes
+- `10.0.0-rc-2.0`
+  - `UIModelValue`.
+    - `IsNullable`. New property. Indicates whether the current property type allows null values, 
+      based on [NullabilityInfo](https://learn.microsoft.com/en-us/dotnet/api/system.reflection.nullabilityinfo).
+
 - `10.0.0-rc-1.0`
   - `XmlDocReader`. New class.
   - `XmlUIModel`. New class.
