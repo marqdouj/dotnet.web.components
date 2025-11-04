@@ -9,6 +9,7 @@ namespace Marqdouj.DotNet.Web.Components.UI
         string? BindValue { get; set; }
         string? FormatString { get; set; }
         string? FormatValue { get; }
+        bool IsNullable { get; }
         bool IsNullableValueType { get; }
         bool IsNumerical { get; }
         PropertyInfo Property { get; }
