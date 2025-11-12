@@ -1,12 +1,10 @@
 # dotnet.web.components
 
-> NOTE: This is a new repository and is released as a Preview version.
-
 ## Summary
 C#  Components, classes, and extensions I find useful in my .NET web-based projects.
 
 ## Demo
-A demo of all my `DotNet` packages can be found [here](https://github.com/marqdouj/dotnet.demo).
+A demo of this, and other of my `DotNet` packages, can be found [here](https://github.com/marqdouj/dotnet.demo).
 
 ## Features
 
@@ -49,7 +47,7 @@ A demo of all my `DotNet` packages can be found [here](https://github.com/marqdo
        - `@inject IResizeObserverService ResizeObserver`
 
 **Classes**
-  - **UI Model**
+  - **UI Models**
     -  Classes for UI presentation and element binding.
        Implements a `BindValue` string property for non-string values
        where binding requires a string. Designed for use with Blazor @bind-Value.
@@ -57,25 +55,5 @@ A demo of all my `DotNet` packages can be found [here](https://github.com/marqdo
   - `XmlUIModel`. Wrapper to UIModel that works with the `XmlDocReader` to update comments.
 
 ## Release Notes
-- `10.0.0-rc-2.1`
-  - `UIModelValue`.
-    - `IsNullable`. Added the property to the `IUIModelValue` interface.
-
-- `10.0.0-rc-2.0`
-  - `UIModelValue`.
-    - `IsNullable`. New property. Indicates whether the current property type allows null values, 
-      based on [NullabilityInfo](https://learn.microsoft.com/en-us/dotnet/api/system.reflection.nullabilityinfo).
-
-- `10.0.0-rc-1.0`
-  - `XmlDocReader`. New class.
-  - `XmlUIModel`. New class.
-
-- `10.0.0-Preview-3.0`
-  - `XMLComments`. Comments are now distributed with the package.
-
-- `10.0.0-Preview-2`
-  - `GeolocationService`. Added service.
-  - `JSLoggerService`.  Added service
-
-- `10.0.0-Preview`
+- `10.0.0`
   - Initial release.

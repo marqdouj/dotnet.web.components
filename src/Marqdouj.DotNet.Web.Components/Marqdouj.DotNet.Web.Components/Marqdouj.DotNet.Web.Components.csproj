@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <PackageIcon>DMNuGet.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <Version>10.0.0-rc-2.1</Version>
+    <Version>10.0.0</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>C# Components, classes, and Extensions for web-based projects</Title>
     <PackageProjectUrl>https://github.com/Marqdouj/DotNet.Web.Components</PackageProjectUrl>
@@ -36,7 +36,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="10.0.0-rc.2.25502.107" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="10.0.0" />
   </ItemGroup>
 
 </Project>
