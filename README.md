@@ -1,4 +1,4 @@
-# dotnet.web.components
+# DotNet.Web.Components
 
 ## Summary
 C#  Components, classes, and extensions I find useful in my .NET web-based projects.
