@@ -2,11 +2,35 @@
 
 namespace Marqdouj.DotNet.Web.Components.UI
 {
+    /// <summary>
+    /// Defines flags that control how value types are handled in BindVaue.Set in scenarios involving
+    /// nulls and empty strings.
+    /// </summary>
+    [Flags]
+    public enum BindValueFlags
+    {
+        None = 0,
+
+        /// <summary>
+        /// Specifies that value types should use the Property.SetValue(null) method for null values.
+        /// The property will assign the default value (e.g., 0 for int/double, etc.) 
+        /// </summary>
+        /// <remarks></remarks>
+        UseDefaultSetValueForNull = 1,
+
+        /// <summary>
+        /// Specifies that empty string values should be treated as null when converting to value types.
+        /// </summary>
+        /// <remarks>Use this option to interpret empty strings as null during value type conversions.</remarks>
+        TreatEmptyStringAsNullForValueTypes = 2,
+    }
+
     public interface IUIModelValue : IUIValueDef
     {
         double? BindMin { get; }
         double? BindMax { get; }
         string? BindValue { get; set; }
+        BindValueFlags BindValueFlags { get; set; }
         string? FormatString { get; set; }
         string? FormatValue { get; }
         bool IsNullable { get; }
@@ -51,6 +75,8 @@ namespace Marqdouj.DotNet.Web.Components.UI
             IsNullable = nullabilityInfo.WriteState == NullabilityState.Nullable;
         }
 
+        public BindValueFlags BindValueFlags { get; set; } = BindValueFlags.None;
+
         /// <summary>
         /// Gets a value indicating whether the current type allows null values, based on <see cref="NullabilityInfo"/>
         /// </summary>
@@ -75,7 +101,7 @@ namespace Marqdouj.DotNet.Web.Components.UI
         /// </summary>
         public string? BindValue 
         { 
-            get => Source != null ? Property.GetValue(Source)?.ToString() : null; 
+            get => Value?.ToString(); 
             set
             {
                 if (Source == null || !Property.CanWrite || ReadOnly)
@@ -85,6 +111,21 @@ namespace Marqdouj.DotNet.Web.Components.UI
                 {
                     Property.SetValue(Source, value);
                     return;
+                }
+
+                if (pType.IsValueType)
+                {
+                    bool useDefaultSetValueForNull = (BindValueFlags & BindValueFlags.UseDefaultSetValueForNull) == BindValueFlags.UseDefaultSetValueForNull;
+                    bool treatEmptyStringAsNullForValueTypes = (BindValueFlags & BindValueFlags.TreatEmptyStringAsNullForValueTypes) == BindValueFlags.TreatEmptyStringAsNullForValueTypes;
+
+                    if (treatEmptyStringAsNullForValueTypes && string.IsNullOrEmpty(value))
+                        value = null;
+
+                    if (useDefaultSetValueForNull && value == null) 
+                    { 
+                        Property.SetValue(Source, null); 
+                        return;
+                    }
                 }
 
                 if (value == null)

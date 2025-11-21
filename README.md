@@ -55,5 +55,11 @@ A demo of this, and other of my `DotNet` packages, can be found [here](https://g
   - `XmlUIModel`. Wrapper to UIModel that works with the `XmlDocReader` to update comments.
 
 ## Release Notes
+- `10.1.0`
+  - `UIModelValue.BindValueFlags (New)`. Applies to `BindValue.Set`.
+    - `None`. No change to processing value.
+    - `UseDefaultSetValueForNull`. Specifies that value types should use the Property.SetValue(null) method for null values.
+    - `TreatEmptyStringAsNullForValueTypes`. Specifies that empty string values should be treated as null when converting to value types.
+
 - `10.0.0`
   - Initial release.

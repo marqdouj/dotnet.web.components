@@ -90,12 +90,154 @@ namespace Marqdouj.DotNet.Web.Components.Tests
             {
                 FormatString = "N2",
                 Source = obj,
-                BindValue = "123.406"
             };
 
+            model.BindValue = "123.406";
             var value = model.BindValue;
 
             Assert.AreEqual("123.406", value);
+        }
+
+        [TestMethod]
+        public void UIModel_BindValue_D_Null()
+        {
+            var obj = new UIModelTestClass();
+            var model = new UIModelValue<UIModelTestClass>(nameof(UIModelTestClass.D))
+            {
+                FormatString = "N2",
+                Source = obj,
+                Value = 123.406
+            };
+
+            model.BindValue = null;
+            var value = model.BindValue;
+
+            Assert.AreEqual("123.406", value);
+        }
+
+        [TestMethod]
+        public void UIModel_BindValue_D_EmptyString()
+        {
+            var obj = new UIModelTestClass();
+            var model = new UIModelValue<UIModelTestClass>(nameof(UIModelTestClass.D))
+            {
+                FormatString = "N2",
+                Source = obj,
+                Value = 123.406
+            };
+
+            model.BindValue = "";
+            var value = model.BindValue;
+
+            Assert.AreEqual("123.406", value);
+        }
+
+        [TestMethod]
+        public void UIModel_BindValue_D_Null_Flags_UseDefaultSet()
+        {
+            var obj = new UIModelTestClass();
+            var model = new UIModelValue<UIModelTestClass>(nameof(UIModelTestClass.D))
+            {
+                FormatString = "N2",
+                Source = obj,
+                Value = 123.406,
+                BindValueFlags = BindValueFlags.UseDefaultSetValueForNull
+            };
+
+            model.BindValue = null;
+            var value = model.BindValue;
+
+            Assert.AreEqual("0", value);
+        }
+
+        [TestMethod]
+        public void UIModel_BindValue_D_Null_Flags_EmptyStringAsNull()
+        {
+            var obj = new UIModelTestClass();
+            var model = new UIModelValue<UIModelTestClass>(nameof(UIModelTestClass.D))
+            {
+                FormatString = "N2",
+                Source = obj,
+                Value = 123.406,
+                BindValueFlags = BindValueFlags.TreatEmptyStringAsNullForValueTypes
+            };
+
+            model.BindValue = null;
+            var value = model.BindValue;
+
+            Assert.AreEqual("123.406", value);
+        }
+
+        [TestMethod]
+        public void UIModel_BindValue_D_Null_Flags_UseDefaultSet_EmptyStringAsNull()
+        {
+            var obj = new UIModelTestClass();
+            var model = new UIModelValue<UIModelTestClass>(nameof(UIModelTestClass.D))
+            {
+                FormatString = "N2",
+                Source = obj,
+                Value = 123.406,
+                BindValueFlags = BindValueFlags.UseDefaultSetValueForNull | BindValueFlags.TreatEmptyStringAsNullForValueTypes
+            };
+
+            model.BindValue = null;
+            var value = model.BindValue;
+
+            Assert.AreEqual("0", value);
+        }
+
+        [TestMethod]
+        public void UIModel_BindValue_D_EmptyString_Flags_UseDefaultSet()
+        {
+            var obj = new UIModelTestClass();
+            var model = new UIModelValue<UIModelTestClass>(nameof(UIModelTestClass.D))
+            {
+                FormatString = "N2",
+                Source = obj,
+                Value = 123.406,
+                BindValueFlags = BindValueFlags.UseDefaultSetValueForNull
+            };
+
+            model.BindValue = "";
+            var value = model.BindValue;
+
+            Assert.AreEqual("123.406", value);
+        }
+
+        [TestMethod]
+        public void UIModel_BindValue_D_EmptyString_Flags_EmptyStringAsNull()
+        {
+            var obj = new UIModelTestClass();
+            var model = new UIModelValue<UIModelTestClass>(nameof(UIModelTestClass.D))
+            {
+                FormatString = "N2",
+                Source = obj,
+                Value = 123.406,
+                BindValueFlags = BindValueFlags.TreatEmptyStringAsNullForValueTypes
+            };
+
+            model.BindValue = "";
+            var value = model.BindValue;
+
+            Assert.AreEqual("123.406", value);
+        }
+
+        [TestMethod]
+        public void UIModel_BindValue_D_EmptyString_Flags_UseDefaultSet_EmptyStringAsNull()
+        {
+            var obj = new UIModelTestClass();
+            var model = new UIModelValue<UIModelTestClass>(nameof(UIModelTestClass.D))
+            {
+                FormatString = "N2",
+                Source = obj,
+                Value = 123.406,
+                BindValueFlags = BindValueFlags.UseDefaultSetValueForNull | BindValueFlags.TreatEmptyStringAsNullForValueTypes
+            };
+
+            model.BindValue = "";
+            var value = model.BindValue;
+
+            Assert.AreEqual("0", value);
         }
 
         [TestMethod]
