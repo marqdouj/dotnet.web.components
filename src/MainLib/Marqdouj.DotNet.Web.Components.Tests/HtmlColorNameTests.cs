@@ -31,7 +31,7 @@ namespace Marqdouj.DotNet.Web.Components.Tests
 
             //Assert
             Assert.IsFalse(names.Items.First().Value.HasValue);
-            Assert.AreEqual(count, names.Items.Count, $"Collection should contain {count} items but was {names.Items.Count} items");
+            Assert.HasCount(count, names.Items, $"Collection should contain {count} items but was {names.Items.Count} items");
             Assert.IsNull(names.Items.First().NameAlias);
             Assert.AreEqual("", names.Items.First().NameDisplay);
         }
@@ -45,7 +45,7 @@ namespace Marqdouj.DotNet.Web.Components.Tests
 
             //Assert
             Assert.IsFalse(names.Items.First().Value.HasValue);
-            Assert.AreEqual(count, names.Items.Count, $"Collection should contain {count} items but was {names.Items.Count} items");
+            Assert.HasCount(count, names.Items, $"Collection should contain {count} items but was {names.Items.Count} items");
             Assert.AreEqual("My Alias", names.Items.First().NameAlias);
             Assert.AreEqual("My Alias", names.Items.First().NameDisplay);
         }
@@ -59,7 +59,7 @@ namespace Marqdouj.DotNet.Web.Components.Tests
 
             //Assert
             Assert.IsTrue(names.Items.First().Value.HasValue);
-            Assert.AreEqual(count, names.Items.Count, $"Collection should contain {count} items but was {names.Items.Count} items");
+            Assert.HasCount(count, names.Items, $"Collection should contain {count} items but was {names.Items.Count} items");
         }
 
         [TestMethod]

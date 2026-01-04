@@ -55,6 +55,9 @@ A demo of this, and other of my `DotNet` packages, can be found [here](https://g
   - `XmlUIModel`. Wrapper to UIModel that works with the `XmlDocReader` to update comments.
 
 ## Release Notes
+- `10.1.1`
+  - Update NuGet packages.
+
 - `10.1.0`
   - `UIModelValue.BindValueFlags (New)`. Applies to `BindValue.Set`.
     - `None`. No change to processing value.
