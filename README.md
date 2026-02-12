@@ -1,5 +1,9 @@
 # DotNet.Web.Components
 
+## NOTES
+A new [DotNet.Web.JsInterop.Modules](https://www.nuget.org/packages/Marqdouj.DotNet.Web.JsInterop.Modules/) library
+has been created that replaces the `GeolocationService` and `ResizeObserverService`.
+
 ## Summary
 C#  Components, classes, and extensions I find useful in my .NET web-based projects.
 
