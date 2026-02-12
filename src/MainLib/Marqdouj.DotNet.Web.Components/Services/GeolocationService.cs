@@ -7,6 +7,8 @@ namespace Marqdouj.DotNet.Web.Components.Services
     /// A wrapper around the device's Geolocation API services.
     /// <see href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API"/>.
     /// </summary>
+    /// <remarks>This service has beeen depreciated. <see href="https://www.nuget.org/packages/Marqdouj.DotNet.Web.JsInterop.Modules/"/></remarks>
+    [Obsolete("This service has been depreciated and is no longer maintained")]
     public interface IGeolocationService
     {
         /// <summary>
@@ -42,6 +44,8 @@ namespace Marqdouj.DotNet.Web.Components.Services
     /// An implementation of <see cref="IGeolocationService"/> that provides 
     /// an interop layer for the device's Geolocation API.
     /// </summary>
+    /// <remarks>This service has beeen depreciated. <see href="https://www.nuget.org/packages/Marqdouj.DotNet.Web.JsInterop.Modules/"/></remarks>
+    [Obsolete("This service has been depreciated and is no longer maintained")]
     public class GeolocationService(IJSRuntime jsRuntime) : IGeolocationService, IAsyncDisposable
     {
         private readonly Lazy<Task<IJSObjectReference>> moduleTask = new(() => 

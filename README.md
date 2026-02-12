@@ -59,6 +59,13 @@ A demo of this, and other of my `DotNet` packages, can be found [here](https://g
   - `XmlUIModel`. Wrapper to UIModel that works with the `XmlDocReader` to update comments.
 
 ## Release Notes
+- `10.2.0`
+  - `Obsolete Services`. These items have been marked as Obsolete and are no longer maintained.
+    Replaced by [DotNet.Web.JsInterop.Modules](https://www.nuget.org/packages/Marqdouj.DotNet.Web.JsInterop.Modules/).
+    - `GeolocationService`.
+    - `ResizeObserverService`.
+  - Update NuGet packages.
+
 - `10.1.2` - `10.1.1`
   - Update NuGet packages.
 

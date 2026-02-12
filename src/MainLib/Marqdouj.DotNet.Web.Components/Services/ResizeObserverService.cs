@@ -4,6 +4,11 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace Marqdouj.DotNet.Web.Components.Services
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <remarks>This service has beeen depreciated. <see href="https://www.nuget.org/packages/Marqdouj.DotNet.Web.JsInterop.Modules/"/></remarks>
+    [Obsolete("This service has been depreciated and is no longer maintained")]
     public interface IResizeObserverService
     {
         event Action<OnResizedArgs>? OnResize;
@@ -18,6 +23,8 @@ namespace Marqdouj.DotNet.Web.Components.Services
     /// Scoped service to monitor html element resizing.
     /// <see href="https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver"/>
     /// </summary>
+    /// <remarks>This service has beeen depreciated. <see href="https://www.nuget.org/packages/Marqdouj.DotNet.Web.JsInterop.Modules/"/></remarks>
+    [Obsolete("This service has been depreciated and is no longer maintained")]
     public class ResizeObserverService : IResizeObserverService, IAsyncDisposable
     {
         private readonly Lazy<Task<IJSObjectReference>> moduleTask;
