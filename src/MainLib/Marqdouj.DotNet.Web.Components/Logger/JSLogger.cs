@@ -4,11 +4,22 @@ using System.Text;
 
 namespace Marqdouj.DotNet.Web.Components.Logger
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <remarks>This service has beeen depreciated. <see href="https://www.nuget.org/packages/Marqdouj.DotNet.Web.JsInterop.Modules/"/></remarks>
+    [Obsolete("This service has been depreciated and is no longer maintained")]
     public interface IJSLoggerService<T> : IJSLoggerService where T : class
     {
 
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <remarks>This service has beeen depreciated. <see href="https://www.nuget.org/packages/Marqdouj.DotNet.Web.JsInterop.Modules/"/></remarks>
+    [Obsolete("This service has been depreciated and is no longer maintained")]
     public interface IJSLoggerService
     {
         IJSLoggerConfig Config { get; set; }
@@ -31,6 +42,12 @@ namespace Marqdouj.DotNet.Web.Components.Logger
         ValueTask Test(string message = "");
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <remarks>This service has beeen depreciated. <see href="https://www.nuget.org/packages/Marqdouj.DotNet.Web.JsInterop.Modules/"/></remarks>
+    [Obsolete("This service has been depreciated and is no longer maintained")]
     public class JSLogger<T> : JSLogger, IJSLoggerService<T> where T : class
     {
         public JSLogger(IJSRuntime jsRuntime) : base(jsRuntime)
@@ -44,6 +61,12 @@ namespace Marqdouj.DotNet.Web.Components.Logger
         }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="jsRuntime"></param>
+    /// <remarks>This service has beeen depreciated. <see href="https://www.nuget.org/packages/Marqdouj.DotNet.Web.JsInterop.Modules/"/></remarks>
+    [Obsolete("This service has been depreciated and is no longer maintained")]
     public partial class JSLogger(IJSRuntime jsRuntime) : IAsyncDisposable, IJSLoggerService
     {
         private readonly Lazy<Task<IJSObjectReference>> moduleTask = new(() => jsRuntime.InvokeAsync<IJSObjectReference>(

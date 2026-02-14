@@ -27,6 +27,8 @@ A demo of this, and other of my `DotNet` packages, can be found [here](https://g
       - `HtmlColorName.ToHex()`. Returns the Hex string for the HtmlColorName.
 
  **Services**
+   - ### These services have been marked as Obsolete and are no longer maintained. See [DotNet.Web.JsInterop.Modules](https://www.nuget.org/packages/Marqdouj.DotNet.Web.JsInterop.Modules/).
+
    - `GeolocationService`. 
      - Uses the Geolocation API services to get the current position.
      - Configuration:
@@ -59,6 +61,11 @@ A demo of this, and other of my `DotNet` packages, can be found [here](https://g
   - `XmlUIModel`. Wrapper to UIModel that works with the `XmlDocReader` to update comments.
 
 ## Release Notes
+- `10.2.1`
+  - `Obsolete Services`. These items have been marked as Obsolete and are no longer maintained.
+    Replaced by [DotNet.Web.JsInterop.Modules](https://www.nuget.org/packages/Marqdouj.DotNet.Web.JsInterop.Modules/).
+    - `JSLoggerService`.
+
 - `10.2.0`
   - `Obsolete Services`. These items have been marked as Obsolete and are no longer maintained.
     Replaced by [DotNet.Web.JsInterop.Modules](https://www.nuget.org/packages/Marqdouj.DotNet.Web.JsInterop.Modules/).
