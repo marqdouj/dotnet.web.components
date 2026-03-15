@@ -57,10 +57,15 @@ A demo of this, and other of my `DotNet` packages, can be found [here](https://g
     -  Classes for UI presentation and element binding.
        Implements a `BindValue` string property for non-string values
        where binding requires a string. Designed for use with Blazor @bind-Value.
+  - `ValueTypeStringValue<T>`. Handles conversion between value types and their string representations, supporting nullable value types.
   - `XmlDocReader`. Provides functionality to read and extract XML documentation comments from an assembly's XML documentation file.
   - `XmlUIModel`. Wrapper to UIModel that works with the `XmlDocReader` to update comments.
 
 ## Release Notes
+- `10.3.0`
+  - `ValueTypeStringValue<T>`. New class.
+  - Update NuGet packages.
+
 - `10.2.1`
   - `Obsolete Services`. These items have been marked as Obsolete and are no longer maintained.
     Replaced by [DotNet.Web.JsInterop.Modules](https://www.nuget.org/packages/Marqdouj.DotNet.Web.JsInterop.Modules/).
