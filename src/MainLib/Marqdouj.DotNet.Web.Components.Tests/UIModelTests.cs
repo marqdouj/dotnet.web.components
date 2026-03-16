@@ -1,4 +1,5 @@
 ﻿using Marqdouj.DotNet.Web.Components.UI;
+using System.ComponentModel.DataAnnotations;
 
 namespace Marqdouj.DotNet.Web.Components.Tests
 {
@@ -814,6 +815,24 @@ namespace Marqdouj.DotNet.Web.Components.Tests
         }
 
         #endregion
+
+        #region NameAlias
+
+        [TestMethod]
+        public void UIModel_NameAlias_WithAlias()
+        {
+            var model = new UIModelValue<UIModelTestClass>(nameof(UIModelTestClass.OptionsN));
+            Assert.AreEqual(UIModelTestClass.OptionsNName, model.NameAlias);
+        }
+
+        [TestMethod]
+        public void UIModel_NameAlias_WithoutAlias()
+        {
+            var model = new UIModelValue<UIModelTestClass>(nameof(UIModelTestClass.Options));
+            Assert.IsNull(model.NameAlias);
+        }
+
+        #endregion
     }
 
     internal enum UIModelTestEnum
@@ -825,6 +844,8 @@ namespace Marqdouj.DotNet.Web.Components.Tests
 
     internal class UIModelTestClass
     {
+        public const string OptionsNName = "Options (Nullable)";
+
         public double D { get; set; }
         public double? DN { get; set; }
         public int I { get; set; }
@@ -834,6 +855,8 @@ namespace Marqdouj.DotNet.Web.Components.Tests
         public UIModelTestEnum E { get; set; }
         public UIModelTestEnum? EN { get; set; }
         public UIModelTestOptions Options { get; set; } = new();
+
+        [Display(Name = OptionsNName)]
         public UIModelTestOptions? OptionsN { get; set; } 
     }
 

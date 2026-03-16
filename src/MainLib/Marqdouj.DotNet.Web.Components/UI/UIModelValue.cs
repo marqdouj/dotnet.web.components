@@ -64,9 +64,10 @@ namespace Marqdouj.DotNet.Web.Components.UI
                 throw new ArgumentException($"PropertyInfo ReflectedType [{property.Name}] does not match source type [{type.Name}].", nameof(property));
 
             Property = property;
+            NameAlias = property.GetDisplayName(false);
             pType = Property.PropertyType;
             pTypeN = Nullable.GetUnderlyingType(pType);
-
+            
             IsNumerical = Property.PropertyType.IsNumerical();
             IsNullableValueType = pTypeN != null;
 
