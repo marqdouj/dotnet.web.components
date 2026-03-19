@@ -24,7 +24,7 @@ namespace Marqdouj.DotNet.Web.Components.Logger
             get => defaultTemplate;
             set
             {
-                ArgumentNullException.ThrowIfNullOrWhiteSpace(value, nameof(defaultTemplate));
+                ArgumentException.ThrowIfNullOrWhiteSpace(value, nameof(defaultTemplate));
                 defaultTemplate = value;
             }
         }
@@ -39,7 +39,7 @@ namespace Marqdouj.DotNet.Web.Components.Logger
         public string Category { get; set; }
         public LogLevel MinLevel { get; private set; } = LogLevel.Information;
         public LogLevel MaxLevel { get; private set; } = LogLevel.Critical;
-        public string Template { get => template; set { ArgumentNullException.ThrowIfNullOrWhiteSpace(value, nameof(Template)); template = value; } }
+        public string Template { get => template; set { ArgumentException.ThrowIfNullOrWhiteSpace(value, nameof(Template)); template = value; } }
 
         public bool IsEnabled(LogLevel logLevel)
         {

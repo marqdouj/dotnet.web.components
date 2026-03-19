@@ -26,7 +26,7 @@ namespace Marqdouj.DotNet.Web.Components.Css
             if (guid == Guid.Empty)
                 guid = Guid.NewGuid();
 
-            ArgumentNullException.ThrowIfNullOrWhiteSpace(prefix, nameof(prefix));
+            ArgumentException.ThrowIfNullOrWhiteSpace(prefix, nameof(prefix));
             prefix = prefix.Trim();
 
             var pattern = "^[A-Za-z_]+$";

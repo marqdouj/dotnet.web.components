@@ -98,7 +98,7 @@ namespace Marqdouj.DotNet.Web.Components.UI
 
             foreach (var info in type.GetMembers())
             {
-                if (info.MemberType == System.Reflection.MemberTypes.Property)
+                if (info.MemberType == MemberTypes.Property)
                 {
                     var comments = GetMemberSummary(info);
                     summary.Add(info.Name, comments);
