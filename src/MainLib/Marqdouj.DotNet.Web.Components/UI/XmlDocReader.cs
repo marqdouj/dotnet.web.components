@@ -21,7 +21,7 @@ namespace Marqdouj.DotNet.Web.Components.UI
     /// If the file is missing or cannot be loaded, the Loaded property will be false and 
     /// LoadException will contain any error encountered.</remarks>
     /// <example>
-    /// Add this Target to the main project *.csproj file to copy the XML document to the output folder.
+    /// If the *.xml files do not get automatically added to the output folder, add this Target to the main project *.csproj file to copy the XML document(s) to the output folder.
     /// <code>
     /// <Target Name="_ResolveCopyLocalNuGetPackageXmls" AfterTargets="ResolveReferences">
     ///   <ItemGroup>
