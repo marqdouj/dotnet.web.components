@@ -34,8 +34,7 @@ A demo of this, and other of my `DotNet` packages, can be found [here](https://g
   - `Css`
     - `Guid.ToCssId()`. Creates a valid css identifier from a Guid.
   - `ModelExtensions`.
-    - `GetDisplayName<TEnum>`. Gets the display attribute name for an Enum value.
-    - `GetDisplayName(PropertyInfo)`. Gets the display attribute name for a property.
+    - `GetDisplayName()/GetDisplayAttribute()`. Gets the display attribute/name for MemberInfo, Enum, PropertyInfo, and Type.
 
  **Services**
    - ### These services have been marked as Obsolete and are no longer maintained. See [DotNet.Web.JsInterop.Modules](https://www.nuget.org/packages/Marqdouj.DotNet.Web.JsInterop.Modules/).
@@ -45,6 +44,9 @@ A demo of this, and other of my `DotNet` packages, can be found [here](https://g
    - `ResizeObserverService`. 
 
 ## Release Notes
+- `10.5.0`
+  - `ModelExtensions`. Update extensions; add support for MemberInfo and Type.
+
 - `10.4.0`
   - `ModelExtensions`. New static class.
   - `UIModelValue`. Automatically resolves NameAlias, using Display attribute name, in constructor.
