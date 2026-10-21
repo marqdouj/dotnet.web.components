@@ -44,6 +44,9 @@ A demo of this, and other of my `DotNet` packages, can be found [here](https://g
    - `ResizeObserverService`. 
 
 ## Release Notes
+- `10.5.1`
+  - Update NuGet packages.
+
 - `10.5.0`
   - `ModelExtensions`. Update extensions; add support for MemberInfo and Type.
 
