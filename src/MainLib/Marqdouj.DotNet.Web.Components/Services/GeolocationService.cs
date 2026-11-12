@@ -3,6 +3,8 @@ using Microsoft.JSInterop;
 
 namespace Marqdouj.DotNet.Web.Components.Services
 {
+#pragma warning disable BL0016 // Unguarded JS interop call
+
     /// <summary>
     /// A wrapper around the device's Geolocation API services.
     /// <see href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API"/>.
@@ -96,4 +98,6 @@ namespace Marqdouj.DotNet.Web.Components.Services
             }
         }
     }
+
+#pragma warning restore BL0016 // Unguarded JS interop call
 }

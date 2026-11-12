@@ -44,40 +44,34 @@ A demo of this, and other of my `DotNet` packages, can be found [here](https://g
    - `ResizeObserverService`. 
 
 ## Release Notes
+- `11.0.0`
+  - Upgrade to .NET 11.0.
 - `10.5.1 - 10.5.2`
   - Update NuGet packages.
-
 - `10.5.0`
   - `ModelExtensions`. Update extensions; add support for MemberInfo and Type.
-
 - `10.4.0`
   - `ModelExtensions`. New static class.
   - `UIModelValue`. Automatically resolves NameAlias, using Display attribute name, in constructor.
-
 - `10.3.0`
   - `ValueTypeStringValue<T>`. New class.
   - Update NuGet packages.
-
 - `10.2.1`
   - `Obsolete Services`. These items have been marked as Obsolete and are no longer maintained.
     Replaced by [DotNet.Web.JsInterop.Modules](https://www.nuget.org/packages/Marqdouj.DotNet.Web.JsInterop.Modules/).
     - `JSLoggerService`.
-
 - `10.2.0`
   - `Obsolete Services`. These items have been marked as Obsolete and are no longer maintained.
     Replaced by [DotNet.Web.JsInterop.Modules](https://www.nuget.org/packages/Marqdouj.DotNet.Web.JsInterop.Modules/).
     - `GeolocationService`.
     - `ResizeObserverService`.
   - Update NuGet packages.
-
 - `10.1.2` - `10.1.1`
   - Update NuGet packages.
-
 - `10.1.0`
   - `UIModelValue.BindValueFlags (New)`. Applies to `BindValue.Set`.
     - `None`. No change to processing value.
     - `UseDefaultSetValueForNull`. Specifies that value types should use the Property.SetValue(null) method for null values.
     - `TreatEmptyStringAsNullForValueTypes`. Specifies that empty string values should be treated as null when converting to value types.
-
 - `10.0.0`
   - Initial release.

@@ -4,6 +4,8 @@ using System.Text;
 
 namespace Marqdouj.DotNet.Web.Components.Logger
 {
+#pragma warning disable BL0016 // Unguarded JS interop call
+
     /// <summary>
     /// 
     /// </summary>
@@ -219,4 +221,6 @@ namespace Marqdouj.DotNet.Web.Components.Logger
             return path;
         }
     }
+
+#pragma warning restore BL0016 // Unguarded JS interop call
 }
