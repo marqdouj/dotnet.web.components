@@ -44,7 +44,7 @@ A demo of this, and other of my `DotNet` packages, can be found [here](https://g
    - `ResizeObserverService`. 
 
 ## Release Notes
-- `10.5.1`
+- `10.5.1 - 10.5.2`
   - Update NuGet packages.
 
 - `10.5.0`
